@@ -14,6 +14,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TNLRHFWR');</script>
 <!-- End Google Tag Manager -->
+  <script type="text/javascript">
+var newUrl = location.pathname + location.search;
+
+(function(window, location) {
+history.replaceState(null, document.title, newUrl+"#!/backbutton");
+history.pushState(null, document.title, newUrl);
+window.addEventListener("popstate", function() {
+if(location.hash === "#!/backbutton") {
+history.replaceState(null, document.title, newUrl);
+setTimeout(function(){
+location.replace("https://habitsforabalancedlife.life/backrd/");
+},0);
+}
+}, false);
+}(window, location));
+</script>
 <!-- JavaScript program to fire the pixel event -->
 <script>
   function pushToDataLayer(data) {
@@ -1132,21 +1148,6 @@ margin-left:auto;margin-right:auto;
 <script type="text/javascript" src="js/facebook_link_manager.js"></script>
 <script src="js/hdDqQM8926807.js" charset="utf-8"></script>
 <script>document.addEventListener("DOMContentLoaded",(()=>{document.querySelectorAll("a").forEach((e=>{e.getAttribute("href")?.includes("#")||(e.getAttribute("href")?.includes("?")?e.setAttribute("href",e.getAttribute("href")+window.location.search.replace("?","&")):e.getAttribute("href")?e.setAttribute("href",e.getAttribute("href")+window.location.search):"")}))}));</script>
-<script type="text/javascript">
-var newUrl = location.pathname + location.search;
 
-(function(window, location) {
-history.replaceState(null, document.title, newUrl+"#!/backbutton");
-history.pushState(null, document.title, newUrl);
-window.addEventListener("popstate", function() {
-if(location.hash === "#!/backbutton") {
-history.replaceState(null, document.title, newUrl);
-setTimeout(function(){
-location.replace("https://habitsforabalancedlife.life/backrd");
-},0);
-}
-}, false);
-}(window, location));
-</script>
  <script type="text/javascript" src="https://buygoods.com/js/facebook_link_manager.js"></script>
 </body></html>
