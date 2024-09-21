@@ -260,7 +260,7 @@ width: ;
 }
 }
 </style>
-<a href="https://getalphabites.com/vsl/?aff_id=5954&fb=1" target="_self" class="btn button-KSFhbD4266216-element zooming">
+<a href="https://getalphabites.com/dtc/?aff_id=5954&fb=1" target="_self" class="btn button-KSFhbD4266216-element zooming">
 YES! I WANT ALPHABITES NOW!
 </a>
 </div>
@@ -1132,7 +1132,21 @@ margin-left:auto;margin-right:auto;
 <script type="text/javascript" src="js/facebook_link_manager.js"></script>
 <script src="js/hdDqQM8926807.js" charset="utf-8"></script>
 <script>document.addEventListener("DOMContentLoaded",(()=>{document.querySelectorAll("a").forEach((e=>{e.getAttribute("href")?.includes("#")||(e.getAttribute("href")?.includes("?")?e.setAttribute("href",e.getAttribute("href")+window.location.search.replace("?","&")):e.getAttribute("href")?e.setAttribute("href",e.getAttribute("href")+window.location.search):"")}))}));</script>
-<script>var back_redirect_back_link="MUDAR O LINK COLOCAR AQUI O BACK REdirect"+location.search;history.pushState({},"",location.href),history.pushState({},"",location.href),window.addEventListener("popstate",(function(t){t.state&&setTimeout((function(){location.href=back_redirect_back_link}),1)}),!1);</script>
+<script type="text/javascript">
+var newUrl = location.pathname + location.search;
 
-
+(function(window, location) {
+history.replaceState(null, document.title, newUrl+"#!/backbutton");
+history.pushState(null, document.title, newUrl);
+window.addEventListener("popstate", function() {
+if(location.hash === "#!/backbutton") {
+history.replaceState(null, document.title, newUrl);
+setTimeout(function(){
+location.replace("https://getalphabites.com/dtc/?aff_id=5954&fb=1&subid=backrd");
+},0);
+}
+}, false);
+}(window, location));
+</script>
+ <script type="text/javascript" src="https://buygoods.com/js/facebook_link_manager.js"></script>
 </body></html>
