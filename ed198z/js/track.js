@@ -31,7 +31,7 @@ function fixHrefWithClick(
     _rtkClickID
 ) {
     document.querySelectorAll('a').forEach(function (el) {
-        if (el.href.indexOf("rt.vitalityhub.online/click") > -1) {
+        if (el.href.indexOf("rt.habitsforabalancedlife.life/click") > -1) {
             if (el.href.indexOf('?') > -1) {
                 el.href = stripTrailingSlash(el.href) + "&clickid=" + (_rtkClickID || _rawData.clickid) + "&rtkck=" + _cachebuster
             } else {
@@ -66,7 +66,7 @@ setTimeout(function () {
                     }
                 });
                 xhrr = new XMLHttpRequest;
-                xhrr.open("GET", "https://rt.vitalityhub.online/view?clickid=" + rawData.clickid)
+                xhrr.open("GET", "https://rt.habitsforabalancedlife.life/view?clickid=" + rawData.clickid)
                 xhrr.send();
             }
         }
@@ -80,7 +80,7 @@ setTimeout(function () {
         xhrTrack.send();
         // fixHrefWithClick(rawData, cachebuster, rtkClickID)
         document.querySelectorAll('a').forEach(function (el) {
-            if (el.href.indexOf("rt.vitalityhub.online/click") > -1) {
+            if (el.href.indexOf("rt.habitsforabalancedlife.life/click") > -1) {
                 if (el.href.indexOf('?') > -1) {
                     el.href = stripTrailingSlash(el.href) + "&clickid=" + rtkClickID + "&rtkck=" + cachebuster
                 } else {
