@@ -17,7 +17,7 @@ var pixelParams = "&" + locSearch.substr(1) + "&sub19=" + rtkfbp + "&sub20=" + r
 if (campaignID == "") {
     campaignID = urlParams.get('rtkcmpid')
 }
-var initialSrc = "https://rt.vitalityhub.online/" + campaignID + "?format=json";
+var initialSrc = "https://rt.habitsforabalancedlife.life/" + campaignID + "?format=json";
 
 function stripTrailingSlash(str) {
     return str.replace(/\/$/, "");
@@ -31,7 +31,7 @@ function fixHrefWithClick(
     _rtkClickID
 ) {
     document.querySelectorAll('a').forEach(function (el) {
-        if (el.href.indexOf("rt.vitalityhub.online/click") > -1) {
+        if (el.href.indexOf("rt.habitsforabalancedlife.life/click") > -1) {
             if (el.href.indexOf('?') > -1) {
                 el.href = stripTrailingSlash(el.href) + "&clickid=" + (_rtkClickID || _rawData.clickid) + "&rtkck=" + _cachebuster
             } else {
@@ -54,7 +54,7 @@ setTimeout(function () {
                 setCookie();
                 // fixHrefWithClick(rawData, cachebuster)
                 document.querySelectorAll('a').forEach(function (el) {
-                    if (el.href.indexOf("rt.vitalityhub.online/click") > -1) {
+                    if (el.href.indexOf("rt.habitsforabalancedlife.life/click") > -1) {
                         if (el.href.indexOf('?') > -1) {
                             el.href = stripTrailingSlash(el.href) + "&clickid=" + rawData.clickid + "&rtkck=" + cachebuster
                         } else {
@@ -66,7 +66,7 @@ setTimeout(function () {
                     }
                 });
                 xhrr = new XMLHttpRequest;
-                xhrr.open("GET", "https://rt.vitalityhub.online/view?clickid=" + rawData.clickid)
+                xhrr.open("GET", "https://rt.habitsforabalancedlife.life/view?clickid=" + rawData.clickid)
                 xhrr.send();
             }
         }
@@ -76,7 +76,7 @@ setTimeout(function () {
         rtkClickID = urlParams.get('rtkcid')
         setCookie();
         xhrTrack = new XMLHttpRequest;
-        xhrTrack.open("GET", "https://rt.vitalityhub.online/view?clickid=" + rtkClickID)
+        xhrTrack.open("GET", "https://rt.habitsforabalancedlife.life/view?clickid=" + rtkClickID)
         xhrTrack.send();
         // fixHrefWithClick(rawData, cachebuster, rtkClickID)
         document.querySelectorAll('a').forEach(function (el) {
