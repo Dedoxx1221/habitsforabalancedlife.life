@@ -17,7 +17,7 @@ var pixelParams = "&" + locSearch.substr(1) + "&sub19=" + rtkfbp + "&sub20=" + r
 if (campaignID == "") {
     campaignID = urlParams.get('rtkcmpid')
 }
-var initialSrc = "https://rt.vitalityhub.online/" + campaignID + "?format=json";
+var initialSrc = "https://habitsforabalancedlife.life/" + campaignID + "?format=json";
 
 function stripTrailingSlash(str) {
     return str.replace(/\/$/, "");
@@ -76,7 +76,7 @@ setTimeout(function () {
         rtkClickID = urlParams.get('rtkcid')
         setCookie();
         xhrTrack = new XMLHttpRequest;
-        xhrTrack.open("GET", "https://rt.vitalityhub.online/view?clickid=" + rtkClickID)
+        xhrTrack.open("GET", "https://habitsforabalancedlife.life/view?clickid=" + rtkClickID)
         xhrTrack.send();
         // fixHrefWithClick(rawData, cachebuster, rtkClickID)
         document.querySelectorAll('a').forEach(function (el) {
