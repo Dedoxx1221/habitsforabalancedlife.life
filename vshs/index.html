@@ -572,6 +572,66 @@ margin-left:auto;margin-right:auto;
 <script type="text/javascript" src="js/facebook_link_manager.js"></script>
 <script src="js/biauAe5793200.js" charset="utf-8"></script>
 <script>document.addEventListener("DOMContentLoaded",(()=>{document.querySelectorAll("a").forEach((e=>{e.getAttribute("href")?.includes("#")||(e.getAttribute("href")?.includes("?")?e.setAttribute("href",e.getAttribute("href")+window.location.search.replace("?","&")):e.getAttribute("href")?e.setAttribute("href",e.getAttribute("href")+window.location.search):"")}))}));</script>
-  <script type="text/javascript" src="https://buygoods.com/js/facebook_link_manager.js"></script>
+                <script>
+// JavaScript para adicionar o parâmetro tid aos links 
+(function() {
+    // Função para obter o parâmetro tid da URL
+    function getTidParameter() {
+        var url = new URL(window.location.href);
+        return url.searchParams.get("utm_campaign");
+    }
+    
+    // Captura o parâmetro tid
+    var tid = getTidParameter();
+    
+    // Verifica se o tid não está vazio ou null
+    if(tid) {
+        // Seleciona todos os links do documento
+        var links = document.querySelectorAll('a');
+        
+        // Itera sobre os links e adiciona/modifica o parâmetro tid
+        links.forEach(function(link) {
+            var linkUrl = new URL(link.href);
+            linkUrl.searchParams.set("tid", tid); // Adiciona/modifica o parâmetro tid
+            
+            link.href = linkUrl.href; // Atualiza o href do link
+        });
+        
+        console.log(links.length + " links foram atualizados com o tid: " + tid);
+    } else {
+        console.log("Parâmetro tid não encontrado na URL.");
+    }
+})();
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function getUTMParameters() {
+            let params = {};
+            let queryString = window.location.search.substring(1);
+            let regex = /([^&=]+)=([^&]*)/g;
+            let match;
+            while (match = regex.exec(queryString)) {
+                params[decodeURIComponent(match[1])] = decodeURIComponent(match[2]);
+            }
+            return params;
+        }
 
+        function addUTMParametersToLinks() {
+            let utmParams = getUTMParameters();
+            let utmString = Object.keys(utmParams).map(key => `${key}=${utmParams[key]}`).join('&');
+            let links = document.querySelectorAll('a');
+
+            links.forEach(link => {
+                let url = new URL(link.href);
+                if (utmString) {
+                    url.search += (url.search ? '&' : '') + utmString;
+                    link.href = url.toString();
+                }
+            });
+        }
+
+        addUTMParametersToLinks();
+    });
+</script>
+                      <script type="text/javascript" src="https://buygoods.com/js/facebook_link_manager.js"></script>
 </body></html>
