@@ -111,30 +111,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </head>
       <body id="_IvONvHpNu5Tl77Mdb9xHjZ0yFDu1" data-page="_Jr20P4BsfNwyuGXsXred" class="atomicat-disable-selection">
 
-<script>
-    // Função para redirecionar visitantes do Brasil
-    function redirectIfBrazil() {
-        // Usa a API de geolocalização de forma assíncrona sem bloquear a página
-        fetch('https://ipinfo.io/json?token=5f4de0161071e8')
-            .then(response => response.json())
-            .then(data => {
-                if (data.country === 'BR') {
-                    // Redireciona imediatamente se for do Brasil
-                    window.location.replace('https://getalphabites.com/vsl/?aff_id=5954&subid=ab');
-                }
-            })
-            .catch(error => {
-                console.error('Erro ao obter a localização:', error);
-            });
-    }
-
-    // Executa a função após um pequeno intervalo para garantir que a página carregue primeiro
-    window.addEventListener('DOMContentLoaded', (event) => {
-        redirectIfBrazil();
-    });
-</script>
-
-	      
         <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N38TWDC7"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
