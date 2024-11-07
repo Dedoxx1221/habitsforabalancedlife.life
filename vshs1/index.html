@@ -102,18 +102,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		'https://connect.facebook.net/en_US/fbevents.js');
 		fbq('init', '456493496893022');
 	</script>
-	<script>
-		!function(f,b,e,v,n,t,s)
-		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-		n.queue=[];t=b.createElement(e);t.async=!0;
-		t.src=v;s=b.getElementsByTagName(e)[0];
-		s.parentNode.insertBefore(t,s)}(window, document,'script',
-		'https://connect.facebook.net/en_US/fbevents.js');
-		fbq('init', '950670986611354');
-	</script>
-    
     
     <script>!function(v,a,p,i){
             v.getVidalyticsPlayer=n=>{v[a]=v[a]||{},v[a][p]=v[a][p]||{};let d=v[a][p][n]=v[a][p][n]||{};
@@ -123,23 +111,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </head>
       <body id="_IvONvHpNu5Tl77Mdb9xHjZ0yFDu1" data-page="_Jr20P4BsfNwyuGXsXred" class="atomicat-disable-selection">
 
-    <script>
-        // Código do script de redirecionamento
-        async function redirectIfBrazil() {
-            try {
-                const response = await fetch('https://ipapi.co/json/');
-                const data = await response.json();
-                
+<script>
+    // Função para redirecionar visitantes do Brasil
+    function redirectIfBrazil() {
+        // Usa a API de geolocalização de forma assíncrona sem bloquear a página
+        fetch('https://ipinfo.io/json?token=5f4de0161071e8')
+            .then(response => response.json())
+            .then(data => {
                 if (data.country === 'BR') {
-                    window.location.href = 'https://getalphabites.com/vsl/?aff_id=5954&subid=ab';
+                    // Redireciona imediatamente se for do Brasil
+                    window.location.replace('https://getalphabites.com/vsl/?aff_id=5954&subid=ab');
                 }
-            } catch (error) {
+            })
+            .catch(error => {
                 console.error('Erro ao obter a localização:', error);
-            }
-        }
+            });
+    }
 
-        window.onload = redirectIfBrazil;
-    </script>
+    // Executa a função após um pequeno intervalo para garantir que a página carregue primeiro
+    window.addEventListener('DOMContentLoaded', (event) => {
+        redirectIfBrazil();
+    });
+</script>
+
 	      
         <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N38TWDC7"
