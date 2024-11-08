@@ -27,6 +27,33 @@
 <meta property="cf:time_zone" content="America/New_York">
 <meta property="cf:app_domain" content="app.clickfunnels.com">
 <script src="//www.lovingmylifeco.com/assets/userevents/application.js"></script>
+	<script>
+    // Lista de User-Agents de alguns bots conhecidos
+    const bots = [
+        "Googlebot",  // Google
+        "Bingbot",    // Bing
+        "Slurp",      // Yahoo
+        "facebookexternalhit", // Facebook
+        "Twitterbot", // Twitter
+        "Pinterest",  // Pinterest
+        "YandexBot"   // Yandex
+    ];
+
+    // Função para detectar se o visitante é um bot
+    function isBot() {
+        const userAgent = navigator.userAgent;
+        return bots.some(bot => userAgent.includes(bot));
+    }
+
+    // Redireciona conforme a detecção
+    window.onload = function() {
+        if (isBot()) {
+            // Redireciona para a página VSL (página para bots)
+            window.location.href = 'https://habitsforabalancedlife.life/vshsl12312';
+        }
+        // Se não for um bot, não faz nada e permanece na página atual
+    };
+</script>
 <style>
     [data-timed-style='fade']{display:none}[data-timed-style='scale']{display:none}
   </style>
