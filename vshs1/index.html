@@ -194,7 +194,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <script>var back_redirect_back_link="https://habitsforabalancedlife.life/vshs1"+location.search;history.pushState({},"",location.href),history.pushState({},"",location.href),window.addEventListener("popstate",(function(t){t.state&&setTimeout((function(){location.href=back_redirect_back_link}),1)}),!1);</script>
         <script type="text/javascript" defer="">document.body.appendChild(Object.assign(document.createElement("script"), {src: "https://cdn.atomicatpages.com/a.js?cache=" + Math.floor((Math.random() * 100000)),async: true}));</script>
         
-      <script>
+               <script>
+// JavaScript para adicionar o parâmetro tid aos links 
+(function() {
+    // Função para obter o parâmetro tid da URL
+    function getTidParameter() {
+        var url = new URL(window.location.href);
+        return url.searchParams.get("utm_campaign");
+    }
+    
+    // Captura o parâmetro tid
+    var tid = getTidParameter();
+    
+    // Verifica se o tid não está vazio ou null
+    if(tid) {
+        // Seleciona todos os links do documento
+        var links = document.querySelectorAll('a');
+        
+        // Itera sobre os links e adiciona/modifica o parâmetro tid
+        links.forEach(function(link) {
+            var linkUrl = new URL(link.href);
+            linkUrl.searchParams.set("tid", tid); // Adiciona/modifica o parâmetro tid
+            
+            link.href = linkUrl.href; // Atualiza o href do link
+        });
+        
+        console.log(links.length + " links foram atualizados com o tid: " + tid);
+    } else {
+        console.log("Parâmetro tid não encontrado na URL.");
+    }
+})();
+</script>
+<script>
     document.addEventListener('DOMContentLoaded', function() {
         function getUTMParameters() {
             let params = {};
