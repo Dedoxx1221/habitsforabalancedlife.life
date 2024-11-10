@@ -228,7 +228,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             if (localStorage.getItem('paginaVisitada')) {
                 // Exibe imediatamente se já visitou
                 document.getElementById("container").style.display = "block";
-                let duracao = 60 * 36; // 36 minutos em segundos
+                let duracao = 60 * 10; // 36 minutos em segundos
                 let display = document.querySelector('#contador');
                 iniciarContagemRegressiva(duracao, display);
             } else {
@@ -236,7 +236,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 localStorage.setItem('paginaVisitada', 'true');
                 setTimeout(function() {
                     document.getElementById("container").style.display = "block";
-                    let duracao = 60 * 36; // 36 minutos em segundos
+                    let duracao = 60 * 10; // 36 minutos em segundos
                     let display = document.querySelector('#contador');
                     iniciarContagemRegressiva(duracao, display);
                 }, 5000); // Atraso de 36 minutos (2.160.000 milissegundos)
