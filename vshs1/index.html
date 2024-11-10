@@ -141,7 +141,108 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
 })(window, document, 'Vidalytics', 'vidalytics_embed_nbQHt6rEfjoV3y6N', 'https://fast.vidalytics.com/embeds/laJCpFnM/nbQHt6rEfjoV3y6N/');
 </script>
+  <style>
+        /* Estilo para centralizar o conteúdo */
+        .container {
+            text-align: center; /* Centraliza o conteúdo */
+            display: none; /* Inicialmente escondido */
+        }
 
+        /* Estilo para o botão pulsante */
+        .botao-pulsante {
+            background-color: #ff8c00; /* Cor laranja escuro */
+            color: white; /* Cor do texto branca */
+            border: solid 2px white; /* Bordas sólidas e brancas */
+            padding: 8px 16px; /* Ajuste do espaçamento interno */
+            font-size: 18px; /* Tamanho do texto ajustado */
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 15px; /* Bordas arredondadas */
+            text-align: center;
+            animation: atomicat-animation-zoomInOut 2s infinite linear; /* Animação de zoom */
+            display: inline-block;
+            margin-top: 30px; /* Espaçamento para a VSL */
+        }
+
+        /* Animação de zoom in e out */
+        @keyframes atomicat-animation-zoomInOut {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.27); /* Aumenta a escala para 1.15 */
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Estilo para o botão quando o mouse passar por cima */
+        .botao-pulsante:hover {
+            animation: atomicat-animation-zoomInOut 2s infinite linear;
+        }
+
+        /* Estilo para o contador */
+        #contador {
+            font-size: 20px; /* Tamanho do texto do contador ajustado */
+            color: yellow;
+            font-weight: bold;
+            margin: 13px 0 0; /* Espaçamento superior para o contador */
+        }
+
+        /* Ajuste de fonte para telas menores */
+        @media screen and (max-width: 480px) {
+            .botao-pulsante {
+                font-size: 16px; /* Fonte menor em telas pequenas */
+            }
+            #contador {
+                font-size: 20px; /* Tamanho do texto do contador menor em telas pequenas */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="container">
+        <!-- Botão pulsante -->
+        <div class="botao-pulsante" onclick="window.location.href='https://getalphabites.com/dtc/?aff_id=5954&fb=1';">
+            YES! I WANT ALPHABITES NOW!
+        </div>
+
+        <!-- Contador regressivo -->
+        <div id="contador">10:00</div>
+    </div>
+
+    <script>
+        // Função para contagem regressiva
+        function iniciarContagemRegressiva(duracao, display) {
+            let timer = duracao, minutos, segundos;
+            setInterval(function () {
+                minutos = parseInt(timer / 60, 10);
+                segundos = parseInt(timer % 60, 10);
+
+                minutos = minutos < 10 ? "0" + minutos : minutos;
+                segundos = segundos < 10 ? "0" + segundos : segundos;
+
+                display.textContent = minutos + ":" + segundos;
+
+                if (--timer < 0) {
+                    timer = 0;
+                }
+            }, 1000);
+        }
+
+        // Exibir conteúdo após 10 segundos e iniciar a contagem regressiva
+        window.onload = function () {
+            setTimeout(function() {
+                document.getElementById("container").style.display = "block"; // Exibe o conteúdo após 10 segundos
+
+                let duracao = 60 * 10; // 10 minutos em segundos
+                let display = document.querySelector('#contador');
+                iniciarContagemRegressiva(duracao, display);
+            }, 5000); // Atraso de 10 segundos
+        };
+    </script>
 <style>
 
 /* CSS for responsive video sizing */
