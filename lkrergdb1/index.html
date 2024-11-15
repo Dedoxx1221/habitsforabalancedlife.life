@@ -15,7 +15,17 @@
         <meta name="description" content="Descrição">
         <title>Título</title>
         
-        
+           <script>
+        // Armazenar os parâmetros em um cookie e limpar a barra de endereços
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.location.search) {
+                document.cookie = "trackingParams=" + encodeURIComponent(window.location.search) + "; path=/";
+                var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+                window.history.replaceState({}, document.title, newUrl);
+            }
+        }); 
+	   </script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             if (window.location.search) {
