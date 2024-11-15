@@ -14,19 +14,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="Aplha BG">
         <title>Secret Kong</title>
-    <script>
+  <script>
         document.addEventListener('DOMContentLoaded', function() {
             const urlParams = new URLSearchParams(window.location.search);
             const brunoAuth = urlParams.get('bruno01');
 
-            // Verifica e armazena o parâmetro no local storage
             if (brunoAuth === 'true') {
-                localStorage.setItem('bruno01', 'true');
-                // Remove a query string da URL
+                // Remove a query string da URL para ocultá-la
                 const newUrl = window.location.origin + window.location.pathname;
                 window.history.replaceState(null, '', newUrl);
-            } else if (localStorage.getItem('bruno01') !== 'true') {
-                // Redireciona se o parâmetro não for encontrado ou local storage não estiver configurado
+            } else {
+                // Redireciona para outra página se a slug não estiver presente
                 window.location.replace('https://habitsforabalancedlife.life/vshsl');
             }
         });
