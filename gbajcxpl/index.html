@@ -14,7 +14,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="Descrição">
         <title>Título</title>
-        
+      	    <script>
+        // Armazenar os parâmetros em um cookie e limpar a barra de endereços
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.location.search) {
+                document.cookie = "trackingParams=" + encodeURIComponent(window.location.search) + "; path=/";
+                var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+                window.history.replaceState({}, document.title, newUrl);
+            }
+
+            // Adicionar parâmetros aos links ao clicar
+            document.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    var params = document.cookie.split('; ').find(row => row.startsWith('trackingParams='));
+                    if (params) {
+                        var tracking = decodeURIComponent(params.split('=')[1]);
+                        link.href += (link.href.includes('?') ? '&' : '?') + tracking.substring(1);
+                    }
+                });
+            });
+        });
+    </script>  
         <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -26,10 +46,12 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '972777817961828');
+fbq('init', '3893456197604028');	
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=972777817961828&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=3893456197604028&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 <script>
