@@ -1,0 +1,667 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SECRETO REVELADO</title>
+    <style>
+        body {
+            padding: 0; 
+            margin: 0;
+            font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+        }
+        header {
+            background-color: #ffffff;
+            color: #000;
+            text-align: center;
+            font-weight: bold;
+            padding: 5px 10px;
+        }
+
+        header span {
+            color: #ED3833;
+        }
+
+        .container {
+            max-width: 1090px;
+            margin: auto;
+        }
+
+        header h1 {
+            font-size: 16px;
+        }
+
+        #video-home {
+            background: #f5f5f5;
+            color: #000;
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        #video-home h1 {
+            font-size: 22px;
+            line-height: 32px;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        @media(min-width: 1200px) {
+            #video-home h1 {
+                font-size: 36px;
+                line-height: 48px;
+            }
+        }
+
+        #video-home h1 span {
+            padding: 5px 10px;
+            background-color: #ED3833;
+        }
+
+        #video-home .video-helper {
+            margin-top: 25px;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #comments {
+            padding: 10px;
+        }
+
+        #comments .total-comments {
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .comments-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .comments-list .comment {
+            display: flex;
+            flex-flow: row;
+            margin-bottom: 20px;
+            font-size: 0.875rem;
+        }
+
+        .comments-list li .comments-list {
+            padding-left: revert;
+        }
+
+        .comments-list .comment .img-profile {
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .comments-list .comment .img-profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .comments-list .comment .content {
+            width: 100%;
+        }
+
+        .comments-list .comment .text-area {
+            background: #f5f5f4;
+            padding: 5px;
+            border-radius: 10px;
+            position: relative;
+        }        
+
+        .comments-list .comment .text-area h2 {
+            color: #4267b2;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .comments-list .comment .text-area p {
+            margin: 0;
+        }
+
+        .comments-list .comment .text-area .actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 13px;
+            position: absolute;
+            color: #90949c;
+            z-index: 10;
+            width: 100%;
+        }
+
+        .comments-list .comment .text-area .actions img {
+            max-width: 100%;
+        }
+
+        .comments-list .comment .text-area .actions .btns {
+            max-width: 60px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 2px;
+            box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        .comments-list .comment .text-area .actions .btns img {
+            max-width: 17px;
+            margin-right: 3px;
+        }
+
+        .logged {
+            text-align: center;
+        }
+
+        footer {
+            background-color: #222222;
+            color: #cecece;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-size: 8px;
+            text-align: center;
+        }
+
+        .mt {
+            margin-top: 25px
+        }
+
+        .mr {
+            margin-right: 10px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .logo-referencias {
+            margin-top: 45px;
+        }
+
+        .list-references {
+            font-size: 0.875rem;
+            color: #8b8b8b;
+            text-align: left;
+        }
+
+        .img-fluid {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .hidden-content {
+            display: none;
+        }
+    </style>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-R61XDDHH50"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R61XDDHH50');
+</script>
+</head>
+
+<body>
+    <!-- Meta Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '228290943573316');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=228290943573316&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <header>
+        <h1><span class="visualizacoes">...</span> personas están viendo este vídeo. Debido a la alta demanda de acceso, garantizamos la presentación sólo hasta el: <span id="diaAtual">...</span> </h1>
+    </header>
+    <main>
+        <section id="video-home" class="main-content">
+            <div class="container">
+			
+			<img src="images/hd.png" alt="head Imagem">
+
+                <script type="text/javascript" id="scr_674131ae1e0c82000b860284"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/beb6579e-8dc0-4795-b2c9-baaa00e44263/players/674131ae1e0c82000b860284/player.js", s.async=!0, document.head.appendChild(s); </script> <style> .elementor-element:has(#smartplayer) { width: 100%; } </style>
+                
+                <div class="video-helper"><img class="mr" width="20" height="20" src="images/vol.jpg" alt="Volume"> Por favor, verifique si el sonido está encendido</div>               
+                
+                <div class="logo-referencias text-center">
+                    <h3>Referencias Científicas</h3>
+                    
+                    <img src="images/logos.png" class="img-fluid" alt="Referencias">
+                </div>
+
+                <ol class="list-references">
+                    <li>Ludwig, D. S., &amp; Ebbeling, C. B. (2018). "The Carbohydrate-Insulin Model of Obesity: Beyond ‘Calories In, Calories Out’" - New England Journal of Medicine.</li>
+                    <li>Hall, K. D., et al. (2015). "Calorie for Calorie, Dietary Fat Restriction Results in More Body Fat Loss than Carbohydrate Restriction in People with Obesity" - Cell Metabolism.</li>
+                    <li>Ebbeling, C. B., et al. (2012). "Effects of Dietary Composition on Energy Expenditure During Weight-Loss Maintenance" - Journal of the American Medical Association (JAMA).</li>
+                    <li>Sumithran, P., et al. (2011). "Long-Term Persistence of Hormonal Adaptations to Weight Loss" - New England Journal of Medicine.</li>
+                    <li>Hirvonen, M., et al. (2007). "Glycogen Depletion and Increased Fat Oxidation during Exercise after Low Glycogen Exercise" - Medicine &amp; Science in Sports &amp; Exercise.</li>
+                    <li>Lynch, C. J., &amp; Adams, S. H. (2014). "Branched-Chain Amino Acids in Metabolic Signaling and Insulin Resistance" - Cell Metabolism.</li>
+                    <li>Volek, J. S., &amp; Phinney, S. D. (2011). The Art and Science of Low Carbohydrate Living - Science Publishers.</li>
+                    <li>Weinsier, R. L., et al. (2000). "Low Resting Metabolic Rate as a Risk Factor for Weight Gain: Role of Metabolic Compensation" - American Journal of Clinical Nutrition.</li>
+                    <li>Astrup, A., et al. (2004). "Diet, Nutrition and the Prevention of Weight Gain and Obesity" - Public Health Nutrition.</li>
+                    <li>Muller, M. J., et al. (2011). "Metabolic Adaptation to Caloric Restriction and Subsequent Refeeding: The Minnesota Starvation Experiment Revisited" - American Journal of Clinical Nutrition.</li>
+                    <li>Bray, G. A., et al. (2004). "The Science of Obesity Management: An Endocrine Society Scientific Statement" - Endocrine Reviews.</li>
+                    <li>Goodpaster, B. H., et al. (1999). "Skeletal Muscle Lipid Content and Insulin Resistance: Evidence for a Paradox in Endurance-Trained Athletes" - Journal of Clinical Endocrinology &amp; Metabolism.</li>
+                    <li>Gaesser, G. A., &amp; Angadi, S. S. (2011). "High-Intensity Interval Training for Health and Fitness: Can Less Be More?" - Journal of Applied Physiology.</li>
+                    <li>Rosenbaum, M., &amp; Leibel, R. L. (2010). "Adaptive Thermogenesis in Humans" - International Journal of Obesity.</li>
+                    <li>Ravussin, E., &amp; Smith, S. R. (2002). "Increased Fat Oxidation Following Medium Chain Triglyceride Consumption" - Obesity Research.</li>
+                    <li>Flegal, K. M., et al. (2013). "Association of All-Cause Mortality with Overweight and Obesity Using Standard Body Mass Index Categories: A Systematic Review and Meta-Analysis" - Journal of the American Medical Association (JAMA).</li>
+                    <li>Blundell, J. E., et al. (2012). "Appetite Control: Methodological Aspects of the Evaluation of Foods" - Obesity Reviews.</li>
+                    <li>Holloszy, J. O., &amp; Coyle, E. F. (1984). "Adaptations of Skeletal Muscle to Endurance Exercise and Their Metabolic Consequences" - Journal of Applied Physiology.</li>
+                    <li>Katan, M. B., &amp; Ludwig, D. S. (2010). "Extra Calories Cause Weight Gain—but How Much?" - Journal of the American Medical Association (JAMA).</li>
+                    <li>Roberts, S. B., &amp; Rosenberg, I. (2006). "Nutrition and Aging: Changes in the Regulation of Energy Metabolism with Aging" - Physiological Reviews.</li>
+                </ol>
+            </div>
+            
+        </section>
+    </main>
+    
+    <section id="comments">
+        <div class="container">
+            <h3>Comentarios</h3>
+            <div class="total-comments">Mostrando 12 comentarios</div>
+
+            <ul class="comments-list">
+                <li>
+                    <div class="comment">
+                        <div class="img-profile"><img src="images/Maria-Hernandez.webp" alt="Perfil 1"></div>
+                        <div class="content">
+                            <div class="text-area">
+                                <h2>Maria Hernandez</h2>
+                                <p>¡Este fue el mejor video que he visto! Ya había intentado de todo para adelgazar después de quedar embarazada. Solo esto me ayudó. ¡Gracias, doctora Marina!</p>
+                                <div class="actions">
+                                    <span>Curtir • Responder • 2h</span>
+                                    <span class="btns">
+                                        <img src="images/l.webp" alt="Like">
+                                        <img src="images/h.webp" alt="Like">
+                                        56
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="comments-list">
+                        <li>
+                            <div class="comment">
+                                <div class="img-profile"><img src="images/Sofia-L%C3%B3pez.webp" alt="Perfil 1"></div>
+                                <div class="content">
+                                    <div class="text-area">
+                                        <h2>Sofia Lopez</h2>
+                                        <p>¿Ella enseña qué hacer?</p>
+                                        <div class="actions">
+                                            <span>Curtir • Responder • 1h</span>
+                                            <span class="btns">
+                                                <img src="images/l.webp" alt="Like">
+                                                <img src="images/h.webp" alt="Like">
+                                                41
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="comment">
+                                <div class="img-profile"><img src="images/Maria-Hernandez.webp" alt="Maria Hernandez"></div>
+                                <div class="content">
+                                    <div class="text-area">
+                                        <h2>Maria Hernandez</h2>
+                                        <p>Sí, mira hasta el final y empieza ahora para ya sentir los efectos.</p>
+                                        <div class="actions">
+                                            <span>Curtir • Responder • 1h</span>
+                                            <span class="btns">
+                                                <img src="images/l.webp" alt="Like">
+                                                <img src="images/h.webp" alt="Like">
+                                                25
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="comment">
+                        <div class="img-profile"><img src="images/Ana-Mart%C3%ADnez.webp" alt="Ana Martinez"></div>
+                        <div class="content">
+                            <div class="text-area">
+                                <h2>Ana Martinez</h2>
+                                <p>Soy cliente de Marina y fui una de las primeras en probar esta Receta. Y desde entonces, nunca he encontrado nada tan poderoso. Perdí 15 kg en el primer mes y luego se lo enseñé a todas mis amigas</p>
+                                <div class="actions">
+                                    <span>Curtir • Responder • 47 min</span>
+                                    <span class="btns">
+                                        <img src="images/l.webp" alt="Like">
+                                        <img src="images/h.webp" alt="Like">
+                                        33
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="comment">
+                        <div class="img-profile"><img src="images/CarmenP%C3%A9rez.webp" alt="Carmen Perez"></div>
+                        <div class="content">
+                            <div class="text-area">
+                                <h2>Carmen Pérez</h2>
+                                <p>¿Dónde ha estado esto todo este tiempo? Pasé los últimos 20 años tratando de adelgazar y nunca había perdido tanto peso en tan poco tiempo.</p>
+                                <div class="actions">
+                                    <span>Curtir • Responder • 33 min</span>
+                                    <span class="btns">
+                                        <img src="images/l.webp" alt="Like">
+                                        <img src="images/h.webp" alt="Like">
+                                        103
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="comment">
+                        <div class="img-profile"><img src="images/Cristina-Sanchez.webp" alt="Cristina Sanchez"></div>
+                        <div class="content">
+                            <div class="text-area">
+                                <h2>Cristina Sanchez</h2>
+                                <p>¿Será que funcionará para mí? Nunca consigo adelgazar de forma definitiva. Ya he intentado de todo…</p>
+                                <div class="actions">
+                                    <span>Curtir • Responder • 13 min</span>
+                                    <span class="btns">
+                                        <img src="images/l.webp" alt="Like">
+                                        <img src="images/h.webp" alt="Like">
+                                        30
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="comments-list">
+                        <li>
+                            <div class="comment">
+                                <div class="img-profile"><img src="images/Ana-Mart%C3%ADnez.webp" alt="Ana Martinez"></div>
+                                <div class="content">
+                                    <div class="text-area">
+                                        <h2>Ana Martinez</h2>
+                                        <p>Yo también era así antes de conocer esta receta. Me sacrificaba para perder unos kilos, pero luego los recuperaba. Después de usar la receta, nunca más volví a engordar</p>
+                                        <div class="actions">
+                                            <span>Curtir • Responder • 2 min</span>
+                                            <span class="btns">
+                                                <img src="images/l.webp" alt="Like">
+                                                <img src="images/h.webp" alt="Like">
+                                                2
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="comment">
+                        <div class="img-profile"><img src="images/Laura-Jimenez.webp" alt="Laura Jimenez"></div>
+                        <div class="content">
+                            <div class="text-area">
+                                <h2>Laura Jimenez</h2>
+                                <p>¡Está funcionando de verdad! ¡NO LO PUEDO CREER! 😮</p>
+                                <div class="actions">
+                                    <span>Curtir • Responder • 15 min</span>
+                                    <span class="btns">
+                                        <img src="images/l.webp" alt="Like">
+                                        <img src="images/h.webp" alt="Like">
+                                        19
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="comment">
+                        <div class="img-profile"><img src="images/Patricia-G%C3%B3mez.webp" alt="Patricia Gómez"></div>
+                        <div class="content">
+                            <div class="text-area">
+                                <h2>Patricia Gómez</h2>
+                                <p>Mi mayor arrepentimiento fue haber intentado acelerar mi metabolismo todo este tiempo. Si hubiera sabido que solo tenía que liberarlo, mi vida habría sido mucho más fácil, jajaja</p>
+                                <div class="actions">
+                                    <span>Curtir • Responder • 46 min</span>
+                                    <span class="btns">
+                                        <img src="images/l.webp" alt="Like">
+                                        <img src="images/h.webp" alt="Like">
+                                        47
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="comment">
+                        <div class="img-profile"><img src="images/13.webp" alt="Elena Gonzalez"></div>
+                        <div class="content">
+                            <div class="text-area">
+                                <h2>Elena Gonzalez</h2>
+                                <p>¿Es normal perder 1 kg en un día? Ahora hasta tengo miedo, jajaja.</p>
+                                <div class="actions">
+                                    <span>Curtir • Responder • 35 min</span>
+                                    <span class="btns">
+                                        <img src="images/l.webp" alt="Like">
+                                        <img src="images/h.webp" alt="Like">
+                                        58
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="comments-list">
+                        <li>
+                            <div class="comment">
+                                <div class="img-profile"><img src="images/Laura-Jimenez.webp" alt="Laura Jimenez"></div>
+                                <div class="content">
+                                    <div class="text-area">
+                                        <h2>Laura Jimenez</h2>
+                                        <p>Me pasó lo mismo, jajaja 😅</p>
+                                        <div class="actions">
+                                            <span>Curtir • Responder • 17 min</span>
+                                            <span class="btns">
+                                                <img src="images/l.webp" alt="Like">
+                                                <img src="images/h.webp" alt="Like">
+                                                15
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="comment">
+                        <div class="img-profile"><img src="images/Laura-Soares.webp" alt="Laura Soares"></div>
+                        <div class="content">
+                            <div class="text-area">
+                                <h2>Laura Soares</h2>
+                                <p>Solo Marina para enseñar estas cosas. 😍</p>
+                                <div class="actions">
+                                    <span>Curtir • Responder • 1 min</span>
+                                    <span class="btns">
+                                        <img src="images/l.webp" alt="Like">
+                                        <img src="images/h.webp" alt="Like">
+                                        8
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="logged">Tienes que iniciar sesión para comentar</div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 - Todos los derechos reservados. Este sitio no es socio de Facebook. facebook es una marca comercial de Meta, Inc.</p>
+            <p><a href="/privacidade.html" rel="noopener">Políticas de Privacidade</a> | <a href="/termos.html" rel="noopener">Termos de uso</a></p>
+        </div>
+    </footer>
+    <script>
+        function generateRandomNumber(previousNumber = null) {
+            const min = 500;
+            const max = 800;
+            let newNumber;
+
+            if (previousNumber === null) {
+                // Primeira execução: Gera um número aleatório entre 500 e 800
+                newNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+            } else {
+                // Gera um número dentro do intervalo de variação de ±3 do último número gerado
+                const lowerBound = Math.max(min, previousNumber - 3);
+                const upperBound = Math.min(max, previousNumber + 3);
+
+                newNumber = Math.floor(Math.random() * (upperBound - lowerBound + 1)) + lowerBound;
+            }
+
+            document.querySelector('.visualizacoes').innerHTML = newNumber
+
+            return newNumber;
+        }
+
+        let lastNumber = null
+        setInterval(() => {
+            lastNumber = generateRandomNumber(lastNumber);
+        }, 1000)
+
+        function getURLParameters() {
+            const queryString = window.location.search;
+            const parameters = {};
+            const keyValuePairs = queryString.slice(1).split('&');
+
+            for (const pair of keyValuePairs) {
+                const [key, value] = pair.split('=');
+                parameters[key] = value;
+            }
+
+            return parameters;
+        }
+
+        function addParametersToLinks(parameters) {
+            const links = document.querySelectorAll('a');
+
+            for (const link of links) {
+                const currentURL = new URL(link.href);
+                const currentParameters = getURLParametersFromURL(currentURL);
+
+                // Combina os parâmetros atuais com os parâmetros da URL
+                const combinedParameters = { ...currentParameters, ...parameters };
+
+                // Reconstrói a URL com os parâmetros combinados
+                const newURL = new URL(currentURL.origin + currentURL.pathname);
+                for (const key in combinedParameters) {
+                newURL.searchParams.append(key, combinedParameters[key]);
+                }
+
+                // Atualiza o href do link
+                link.href = newURL.toString();
+            }
+        }
+
+        function getURLParametersFromURL(url) {
+            const parameters = {};
+            const searchParams = url.searchParams;
+
+            for (const [key, value] of searchParams.entries()) {
+                parameters[key] = value;
+            }
+
+            return parameters;
+        }
+
+        const parameters = getURLParameters();
+        addParametersToLinks(parameters);
+
+        function arrayToURLParams(array) {
+            if(!array.length) return
+            
+            const urlParams = new URLSearchParams();
+            for (const [key, value] of array) {
+                urlParams.append(key, value);
+            }
+            return urlParams.toString();
+        }
+
+        const exibirDataHoraAtual = () => {
+            const dataAtual = new Date();
+
+            const dia = String(dataAtual.getDate()).padStart(2, '0');
+            const mes = String(dataAtual.getMonth() + 1).padStart(2, '0');
+            const ano = dataAtual.getFullYear();
+
+            const dataFormatada = `${dia}/${mes}/${ano}`;
+
+            document.getElementById('diaAtual').innerText = dataFormatada;
+        }
+
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || (e.ctrlKey && e.shiftKey && e.key === 'J') || (e.ctrlKey && e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+
+        (function() {
+            // var devtools = function() {};
+            // devtools.toString = function() {
+            //     if ((window.console && (console.firebug || (console.exception && console.table))) || (window.outerHeight - window.innerHeight) > 100) {
+            //         window.location.href = 'about:blank';
+            //     }
+            // }
+
+            // setInterval(function() {
+            //     console.log('%c', devtools);
+            // }, 1000);
+
+            exibirDataHoraAtual()
+        })();
+     </script>
+
+
+</body></html>
