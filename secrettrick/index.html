@@ -767,19 +767,21 @@ window.addEventListener('load', function(){
             return params;
         }
 
-        function addUTMParametersToButton() {
+        function addUTMParametersToLinks() {
             let utmParams = getUTMParameters();
             let utmString = Object.keys(utmParams).map(key => `${key}=${utmParams[key]}`).join('&');
-            let button = document.querySelector('.botao-pulsante');
+            let links = document.querySelectorAll('a');
 
-            if (utmString && button) {
-                let url = new URL(button.getAttribute('onclick').match(/'(.*?)'/)[1]);
-                url.search += (url.search ? '&' : '') + utmString;
-                button.setAttribute('onclick', `window.location.href='${url.toString()}'`);
-            }
+            links.forEach(link => {
+                let url = new URL(link.href);
+                if (utmString) {
+                    url.search += (url.search ? '&' : '') + utmString;
+                    link.href = url.toString();
+                }
+            });
         }
 
-        addUTMParametersToButton();
+        addUTMParametersToLinks();
     });
 </script>
 
