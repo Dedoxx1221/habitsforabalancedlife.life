@@ -169,7 +169,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <script>var back_redirect_back_link="https://habitsforabalancedlife.life/vshs1"+location.search;history.pushState({},"",location.href),history.pushState({},"",location.href),window.addEventListener("popstate",(function(t){t.state&&setTimeout((function(){location.href=back_redirect_back_link}),1)}),!1);</script>
         <script type="text/javascript" defer="">document.body.appendChild(Object.assign(document.createElement("script"), {src: "https://cdn.atomicatpages.com/a.js?cache=" + Math.floor((Math.random() * 100000)),async: true}));</script>
         
-  <script>
+<script>
     document.addEventListener('DOMContentLoaded', function() {
         function getUTMParameters() {
             let params = {};
@@ -184,19 +184,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         function addUTMParametersToButton() {
             let utmParams = getUTMParameters();
-            let utmString = Object.keys(utmParams).map(key => `${key}=${utmParams[key]}`).join('&');
+            let utmString = Object.keys(utmParams)
+                .map(key => `${key}=${utmParams[key]}`)
+                .join('&');
             let button = document.querySelector('.botao-pulsante');
 
             if (utmString && button) {
-                let url = new URL(button.getAttribute('onclick').match(/'(.*?)'/)[1]);
-                url.search += (url.search ? '&' : '') + utmString;
-                button.setAttribute('onclick', `window.location.href='${url.toString()}'`);
+                // Obtenha a URL diretamente
+                let baseUrl = new URL(button.dataset.href || button.getAttribute('data-href'));
+                baseUrl.search += (baseUrl.search ? '&' : '') + utmString;
+
+                // Atualize o atributo onclick para redirecionar à nova URL
+                button.setAttribute('onclick', `window.location.href='${baseUrl.toString()}'`);
             }
         }
 
         addUTMParametersToButton();
     });
 </script>
+
 </script>
       
     </body></html>
