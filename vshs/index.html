@@ -140,7 +140,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </style></div></div></div></div></div></div></div></div></div><div class="atomicat-container-3d11ed1 atomicat-big-outer-container    atomicat-delay    "><style id="atomicat-style-3d11ed1">.atomicat-container-3d11ed1>.atomicat-outer-container>.atomicat-container{flex-direction:row}.atomicat-big-container .atomicat-container-3d11ed1.atomicat-big-outer-container{background:#25425d;background-size:cover;background-repeat:no-repeat;background-position:center}</style><div class="atomicat-outer-container atomicat-container-boxed  "><div class="atomicat-container atomicat-inner-container  "><div class="atomicat-container-57a646d atomicat-big-outer-container        "><style id="atomicat-style-57a646d">.atomicat-container-57a646d>.atomicat-outer-container>.atomicat-container{flex-direction:column}.atomicat-big-container .atomicat-container-57a646d.atomicat-big-outer-container{background-size:cover;background-repeat:no-repeat;background-position:center;width:100%}@media screen and (max-width:480px){.atomicat-big-container .atomicat-container-57a646d.atomicat-big-outer-container{width:100%}}</style><div class="atomicat-outer-container atomicat-container-full-width  "><div class="atomicat-container atomicat-inner-container  "><div class="atomicat-component-container  atomicat-component-container-5d524b0  atomicat-relative  "><style id="atomicat-style-5d524b0">.atomicat-button-5d524b0.atomicat-element-container .atomicat-button:hover{animation:atomicat-animation-zoomInOut 2s infinite linear}.atomicat-button-5d524b0.atomicat-element-container .atomicat-button{background:#ff8c00;border-style:solid;border-top-left-radius:15px;color:#fff;border-right-width:2px;animation:atomicat-animation-zoomInOut 2s infinite linear;border-left-width:2px;border-bottom-width:2px;border-bottom-right-radius:15px;border-top-width:2px;border-bottom-left-radius:15px;border-top-right-radius:15px;font-size:24px;align-self:center}@media screen and (max-width:480px){.atomicat-button-5d524b0.atomicat-element-container .atomicat-button{font-size:16px}}.atomicat-component-container-5d524b0>.atomicat-element-container{margin-top:10px}</style><div class="atomicat-element-container atomicat-relative atomicat-element-container-5d524b0 atomicat-button-5d524b0 atomicat-button   atomicat-button-wrapper atomicat-flex-column "><a href="https://rt.hiddensecret.online/click?sub12=Black_Gorila" class="atomicat-button-before  atomicat-button ">YES! I WANT ALPHABITES NOW!</a></div></div><div class="atomicat-component-container  atomicat-component-container-3ba72d9  atomicat-relative  "><style id="atomicat-style-3ba72d9">.atomicat-component-container-3ba72d9>.atomicat-element-container{margin-top:10px;margin-bottom:10px}</style><div class="atomicat-element-container atomicat-relative atomicat-element-container-3ba72d9 atomicat-html-3ba72d9 atomicat-html   "><div class="atomicat-inner-element-container"><div style="text-align: center; font-size: 28px; color: yellow; margin: 0;">
    <span id="countdown"></span>
 </div>
+<body>
+    <script>
+        // Configurações do contador
+        const min = 400; // Número mínimo
+        const max = 600; // Número máximo
+        const speed = 4000; // Velocidade de atualização em milissegundos (1 segundo)
 
+        // Seleciona o elemento para atualização
+        const counterElement = document.querySelector('.atomicat-random');
+
+        // Função para gerar um número aleatório entre min e max
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        // Atualiza o número no intervalo especificado
+        setInterval(() => {
+            const newNumber = getRandomNumber(min, max);
+            counterElement.textContent = newNumber;
+        }, speed);
+    </script>
 <script>
     var countdownElement = document.getElementById('countdown');
     var timeLeft = 10 * 60;
