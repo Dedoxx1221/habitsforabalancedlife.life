@@ -771,16 +771,16 @@ margin-left:auto;margin-right:auto;
 <script>document.addEventListener("DOMContentLoaded",(()=>{document.querySelectorAll("a").forEach((e=>{e.getAttribute("href")?.includes("#")||(e.getAttribute("href")?.includes("?")?e.setAttribute("href",e.getAttribute("href")+window.location.search.replace("?","&")):e.getAttribute("href")?e.setAttribute("href",e.getAttribute("href")+window.location.search):"")}))}));</script>
 <script type="text/javascript" defer="">document.body.appendChild(Object.assign(document.createElement("script"), {src: "https://cdn.atomicatpages.com/a.js?cache=" + Math.floor((Math.random() * 100000)),async: true}));</script>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const redirectURL = "https://getalphabites.com/dtc/?aff_id=5954&fb=1&subid1=bkrd2";
-
-        // Intercepta o evento de voltar na navegação
-        window.onpopstate = function () {
-            window.location.href = redirectURL;
-        };
-
-        // Adiciona um estado ao histórico para manipular o botão de voltar
-        history.pushState(null, null, window.location.href);
-    });
+    var back_redirect_back_link = "https://getalphabites.com/dtc/?aff_id=5954&fb=1&subid1=bkrd2" + location.search;
+    history.pushState({}, "", location.href);
+    history.pushState({}, "", location.href);
+    window.addEventListener("popstate", function (event) {
+        if (event.state) {
+            setTimeout(function () {
+                location.href = back_redirect_back_link;
+            }, 1);
+        }
+    }, false);
 </script>
+
 </body></html>
