@@ -1082,5 +1082,32 @@ window.fetch = async (request, init) => {
 
 <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" data-cf-beacon="{" rayid":"8f8a7b6c5f596681","servertiming":{"name":{"cfextpri":true,"cfl4":true,"cfspeedbrain":true,"cfcachestatus":true}},"version":"2024.10.5","token":"e79dff4216d94d7599d104efc618c69f"}"="" crossorigin="anonymous"></script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function getUTMParameters() {
+            let params = {};
+            let queryString = window.location.search.substring(1);
+            let regex = /([^&=]+)=([^&]*)/g;
+            let match;
+            while (match = regex.exec(queryString)) {
+                params[decodeURIComponent(match[1])] = decodeURIComponent(match[2]);
+            }
+            return params;
+        }
 
+        function addUTMParametersToButton() {
+            let utmParams = getUTMParameters();
+            let utmString = Object.keys(utmParams).map(key => `${key}=${utmParams[key]}`).join('&');
+            let button = document.querySelector('.botao-pulsante');
+
+            if (utmString && button) {
+                let url = new URL(button.getAttribute('onclick').match(/'(.*?)'/)[1]);
+                url.search += (url.search ? '&' : '') + utmString;
+                button.setAttribute('onclick', `window.location.href='${url.toString()}'`);
+            }
+        }
+
+        addUTMParametersToButton();
+    });
+</script>
 </body></html>
