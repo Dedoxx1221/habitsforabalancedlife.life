@@ -275,53 +275,79 @@ padding-bottom: 1.5vh;
 text-align: center;
 }
 }
-</style>
-<div class="subheadline-orczsa7345042-element subheadline">
-<h2>
-Elimine o mau hálito hoje por <br>12x R$9,74
-</h2>
-</div>
-</div>
-<div class="button-cHMJuu3890160">
-<style>
-a.button-cHMJuu3890160-element {
-background: #00008b;
-border-radius: 32px;
-border: none;
-color: #ffff;
-padding: 16px 32px 16px 32px;
-font-weight: 600;
-display: block;
-width: fit-content;
-text-align: center;
-margin: 2vh auto 2vh auto;
-font-size: 1.49vw;
-box-sizing: border-box;
-max-width: 100%;
-transition: all 0.5s ease-in-out;
-}
-a.button-cHMJuu3890160-element:hover {
-filter: brightness(1.2);
-}
-@media (max-width: 1200px) {
-a.button-cHMJuu3890160-element {
-font-size: 1.69vw;
-margin: 1.32vh auto 1.5vh auto;
-padding: 8px 16px 8px 16px;
-}
-}
-@media (max-width: 640px) {
-a.button-cHMJuu3890160-element {
-font-size: 4.13vw;
-padding: 12px 24px 12px 24px;
-margin: 1vh auto 1vh auto;
-width: ;
-}
-}
-</style>
-<a href="https://pay.kirvano.com/2eb21bc9-2e23-4219-a8e0-fc4786017ae1" target="_blank" class="btn button-cHMJuu3890160-element zooming">
-Quero eliminar o mau hálito
-</a>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        .pulsating-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: pulse 1.5s infinite;
+            transition: background-color 0.3s ease;
+        }
+
+        .pulsating-button:hover {
+            background-color: #0056b3;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            }
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .promo-text {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                document.getElementById("button-container").classList.remove("hidden");
+            }, 1110000);
+        });
+    </script>
+</head>
+<body>
+    <div id="button-container" class="hidden" style="text-align: center;">
+        <div class="promo-text">Elimine o mau hálito hoje por 12x R$9,74</div><br>
+        <a href="https://pay.kirvano.com/2eb21bc9-2e23-4219-a8e0-fc4786017ae1" class="pulsating-button">
+            Quero eliminar o mau hálito
+        </a>
+    </div>
+</body>
+</html>
+<br>
 </div>
 <div class="image-WwkxoR7019585">
 <style>
@@ -747,6 +773,7 @@ function getParams() {
         for (let r = 0; r < prefix.length; r++) - 1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
     })
 }();</script>
+<script src="js/vbAYXx4982259.js" charset="utf-8"></script>
 <script>document.addEventListener("DOMContentLoaded",(()=>{document.querySelectorAll("a").forEach((e=>{e.getAttribute("href")?.includes("#")||(e.getAttribute("href")?.includes("?")?e.setAttribute("href",e.getAttribute("href")+window.location.search.replace("?","&")):e.getAttribute("href")?e.setAttribute("href",e.getAttribute("href")+window.location.search):"")}))}));</script>
 <script type="text/javascript" defer="">document.body.appendChild(Object.assign(document.createElement("script"), {src: "https://cdn.atomicatpages.net/cdn/a.js?cache=" + Math.floor((Math.random() * 100000)),async: true}));</script>
 
