@@ -94,8 +94,42 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				</div>
 				<div class="elementor-element elementor-element-f55c70f elementor-widget elementor-widget-html" data-id="f55c70f" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
-					<div id="vid_673c66c3cb661f000b2078cb" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0;"> <img decoding="async" id="thumb_673c66c3cb661f000b2078cb" src="images/thumbnail.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" alt="thumbnail"> <div id="backdrop_673c66c3cb661f000b2078cb" style=" -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); position: absolute; top: 0; height: 100%; width: 100%; "></div> </div> <script type="text/javascript" id="scr_673c66c3cb661f000b2078cb"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/54162d58-59d8-4fdb-ad51-271907d824de/players/673c66c3cb661f000b2078cb/player.js", s.async=!0,document.head.appendChild(s); </script> <style> .elementor-element:has(#smartplayer) { width: 100%; } </style>
+									<div id="vid_673c66c3cb661f000b2078cb" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0;">
+    <!-- Camada invisível sobre o vídeo para capturar o clique -->
+    <div id="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0); z-index: 10; display: none;"></div>
+    
+    <!-- Thumbnail do vídeo -->
+    <img decoding="async" id="thumb_673c66c3cb661f000b2078cb" src="images/thumbnail.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" alt="thumbnail">
+    
+    <div id="backdrop_673c66c3cb661f000b2078cb" style=" -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); position: absolute; top: 0; height: 100%; width: 100%;"></div>
+</div>
 
+<script type="text/javascript" id="scr_673c66c3cb661f000b2078cb">
+    var s = document.createElement("script");
+    s.src = "https://scripts.converteai.net/54162d58-59d8-4fdb-ad51-271907d824de/players/673c66c3cb661f000b2078cb/player.js", s.async = !0, document.head.appendChild(s);
+</script>
+
+<style>
+    .elementor-element:has(#smartplayer) {
+        width: 100%;
+    }
+</style>
+
+<script>
+    // Variáveis
+    var overlay = document.getElementById('overlay');
+    var videoContainer = document.getElementById('vid_673c66c3cb661f000b2078cb');
+
+    // Função para mostrar o overlay após 5 minutos
+    setTimeout(function() {
+        overlay.style.display = "block"; // Torna o overlay visível após 5 minutos
+    }, 31 * 60 * 1000); // 5 minutos em milissegundos (5 * 60 * 1000)
+
+    // Adiciona o evento de clique na camada invisível
+    overlay.addEventListener('click', function() {
+        window.location.href = "https://pay.hotmart.com/C97409918F?checkoutMode=10"; // Redireciona para o link desejado
+    });
+</script>
 <style>.esconder { display: none }</style>
 
 <script type="text/javascript">
